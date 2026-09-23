@@ -22,11 +22,7 @@ Gridlock turns the familiar 3x3 game into a focused local multiplayer experience
 
 The game uses a dark game-arena visual style with contrasting coral X pieces, mint O pieces, responsive controls, modal feedback, and subtle motion.
 
-Add a real screenshot at `assets/preview.png` before publishing the repository. Then place this line below the paragraph to show it on GitHub:
-
-```markdown
 ![Gridlock game preview](assets/preview.png)
-```
 
 ## Play Locally
 
@@ -63,7 +59,8 @@ GAME TIC TAC TOE/
 ├── style.css                          # Responsive visual design and animations
 ├── app.js                             # Game rules, state, score, and controls
 ├── assets/
-│   └── computer-mouse-click-352734.mp3 # Optional move sound effect
+│   ├── computer-mouse-click-352734.mp3 # Optional move sound effect
+│   └── preview.png                     # README game preview image
 └── README.md                          # Project documentation
 ```
 
@@ -80,7 +77,7 @@ GAME TIC TAC TOE/
 
 Before sharing the project publicly, make these small improvements:
 
-- Add `assets/preview.png` with a clean desktop or mobile screenshot.
+- Keep `assets/preview.png` updated when the interface changes.
 - Add a short live demo link near the top of this README.
 - Add a repository description such as: `A polished two-player Tic Tac Toe game built with vanilla JavaScript.`
 - Add relevant GitHub topics: `tic-tac-toe`, `javascript-game`, `vanilla-javascript`, `html`, `css`, `frontend`
