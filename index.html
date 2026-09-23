@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>Gridlock | Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">+</div>
+      <div>
+        <p class="eyebrow">TWO PLAYER ARENA</p>
+        <h1>Gridlock</h1>
+      </div>
+      <button class="icon-button menu-button" id="menuButton" aria-label="Open game menu" title="Game menu">&#9776;</button>
+    </header>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score-card score-x active" id="scoreXCard"><span class="player-label">PLAYER X</span><strong id="scoreX">0</strong></div>
+      <div class="round-pill">ROUND <span id="roundNumber">1</span></div>
+      <div class="score-card score-o" id="scoreOCard"><span class="player-label">PLAYER O</span><strong id="scoreO">0</strong></div>
+    </section>
+
+    <section class="game-panel">
+      <div class="status-row"><span class="status-dot" id="statusDot"></span><p id="turnStatus">Player X's turn</p><span class="move-count" id="moveCount">0 / 9</span></div>
+      <div class="game" role="grid" aria-label="Tic tac toe board">
+        <button class="box" aria-label="Empty cell 1" role="gridcell"></button><button class="box" aria-label="Empty cell 2" role="gridcell"></button><button class="box" aria-label="Empty cell 3" role="gridcell"></button>
+        <button class="box" aria-label="Empty cell 4" role="gridcell"></button><button class="box" aria-label="Empty cell 5" role="gridcell"></button><button class="box" aria-label="Empty cell 6" role="gridcell"></button>
+        <button class="box" aria-label="Empty cell 7" role="gridcell"></button><button class="box" aria-label="Empty cell 8" role="gridcell"></button><button class="box" aria-label="Empty cell 9" role="gridcell"></button>
+      </div>
+    </section>
+
+    <div class="actions"><button class="secondary-button" id="resetButton">Reset round</button><button class="primary-button" id="newMatchButton">New match</button></div>
+    <p class="shortcut-hint">First to 5 wins the match</p>
+  </main>
+
+  <div class="modal-backdrop hidden" id="resultModal" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="modal result-modal"><div class="result-icon" id="resultIcon">X</div><p class="eyebrow">ROUND COMPLETE</p><h2 id="resultTitle">Player X wins!</h2><p class="modal-copy" id="resultCopy">That was a clean line.</p><button class="primary-button wide-button" id="nextRoundButton">Next round</button><button class="text-button" id="resultMenuButton">Open game menu</button></div></div>
+
+  <div class="modal-backdrop hidden" id="menuModal" role="dialog" aria-modal="true" aria-labelledby="menuTitle"><div class="modal menu-modal"><div class="modal-heading"><div><p class="eyebrow">GRIDLOCK</p><h2 id="menuTitle">Game menu</h2></div><button class="icon-button close-button" id="closeMenuButton" aria-label="Close game menu">&times;</button></div><div class="menu-options"><button class="menu-option" id="resumeButton"><span class="option-icon">&#9654;</span><span><strong>Resume game</strong><small>Back to the board</small></span></button><button class="menu-option" id="menuNewRoundButton"><span class="option-icon">&#8635;</span><span><strong>Restart round</strong><small>Keep the current score</small></span></button><button class="menu-option" id="menuNewMatchButton"><span class="option-icon">&#10038;</span><span><strong>New match</strong><small>Start the scoreboard again</small></span></button><button class="menu-option" id="soundButton"><span class="option-icon" id="soundIcon">&#9835;</span><span><strong>Sound effects</strong><small id="soundLabel">On</small></span></button><button class="menu-option danger-option" id="quitButton"><span class="option-icon">&#8592;</span><span><strong>Quit to title</strong><small>Pause this match</small></span></button></div></div></div>
+
+  <div class="modal-backdrop hidden" id="quitModal" role="dialog" aria-modal="true" aria-labelledby="quitTitle"><div class="modal quit-modal"><div class="pause-icon">||</div><p class="eyebrow">MATCH PAUSED</p><h2 id="quitTitle">Take a breather?</h2><p class="modal-copy">Your score is saved. Jump back in whenever you are ready.</p><button class="primary-button wide-button" id="continueButton">Continue match</button><button class="text-button" id="quitNewMatchButton">Start a new match</button></div></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
