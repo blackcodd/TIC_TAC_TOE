@@ -86,6 +86,8 @@ Before sharing the project publicly, make these small improvements:
 - Confirm that the sound toggle, menu buttons, win popup, draw state, reset round, and new match actions all work before publishing.
 - Add a license if you plan to accept contributions or allow reuse.
 
+## LIVE LINK :   tingutis.netlify.app
+
 ## Possible Next Improvements
 
 - Add a single-player mode against an AI opponent.
