@@ -145,12 +145,3 @@ document.querySelector('#quitNewMatchButton').addEventListener('click', startNew
 document.querySelectorAll('.modal-backdrop').forEach((backdrop) => backdrop.addEventListener('click', (event) => { if (event.target === backdrop && backdrop.id !== 'resultModal') setModal(backdrop, false); }));
 
 updateStatus();
-
-newbtn.addEventListener('click', () => {
-  boxes.forEach((box) => {
-    box.innerText = '';
-    box.disabled = false;
-  });
-  hide_winner.classList.add('afterwin');
-  terno = true;
-});
